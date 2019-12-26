@@ -1,0 +1,2 @@
+class Contr < ApplicationRecord
+end
