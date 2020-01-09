@@ -1,6 +1,6 @@
 module ApplicationHelper
 	def smart_title
-		qwe = "qwe"
+		qwe = "qwer"
 		base_title = "Ruby on " + qwe + " rails"
 	end
 	
