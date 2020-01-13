@@ -1,13 +1,22 @@
-<footer class="footer">
+<footer class="navbar navbar-fixed-bottom">
+	
+
 	<small>
-		The <a href="http://www.rails.org/">Ruby in Rails</a>
-		by <a href="http://www.Mih.org/"> Michael </a>
+		<div nopod>
+			The <a href="http://www.rails.org/">Ruby in Rails</a>
+			by <a href="http://www.Mih.org/"> Michael </a>
+		</div>
 	</small>
+	
 	<nav>
 		<ul class="nav nav-pills">
 		<li role="presentation" class="active"><%= link_to "About", '#' %></li>
 		<li role="presentation"><%= link_to "News", '#' %></li>
-		<li role="presentation"><%= link_to "Help", '#' %> </li>
+		<li role="presentation"><%= link_to "Help", help_path %> </li>
+		<li><%= link_to "Contacts", static_pages_contacts_path %></li>
 		</ul>
+	
 	</nav>
+
+
 </footer>
