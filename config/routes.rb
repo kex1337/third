@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'static_pages/about'
   get 'static_pages/contacts'
   get 'signup', to: 'users#new'
+  get 'show', to: 'users#show'
 
   resources :contrs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
