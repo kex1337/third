@@ -1,11 +1,11 @@
 	
-	
+
 
 	<h1>
-		<%= gravatar_for @user %>
-		<%= @user.name %>
+		<%= gravatar_for current_user %>
+		<%= current_user&.name %>
 	</h1>
 	
 	<h2> 
-		Email: <%= @user.email %>
+		Email: <%= current_user&.email %>
 	</h2>
