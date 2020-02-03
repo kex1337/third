@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   
+  get 'password_resets/new'
+  get 'password_resets/edit'
+  get 'account_activations/Runnibg'
+  get 'account_activations/via'
+  get 'account_activations/Sprong'
+  get 'account_activations/preloader'
+  get 'account_activations/in'
+  get 'account_activations/process'
+  get 'account_activations/1252'
   get 'sessions/new'
   root 'static_pages#home'
   get 'help', to: 'static_pages#help'
@@ -10,5 +19,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :account_activations, only: [:edit]
+  resources :password_resets, only: [:new, :create, :edit, :update]
 end
