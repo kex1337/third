@@ -1,0 +1,27 @@
+<%= form_with(model: contr, local: true) do |form| %>
+  <% if contr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contr.errors.count, "error") %> prohibited this contr from being saved:</h2>
+
+      <ul>
+      <% contr.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :a1 %>
+    <%= form.text_field :a1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :a2 %>
+    <%= form.text_field :a2 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

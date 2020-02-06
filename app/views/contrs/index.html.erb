@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Contrs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>A1</th>
+      <th>A2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contrs.each do |contr| %>
+      <tr>
+        <td><%= contr.a1 %></td>
+        <td><%= contr.a2 %></td>
+        <td><%= link_to 'Show', contr %></td>
+        <td><%= link_to 'Edit', edit_contr_path(contr) %></td>
+        <td><%= link_to 'Destroy', contr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contr', new_contr_path %>
